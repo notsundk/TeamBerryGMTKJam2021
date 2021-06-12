@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class GameLogic : MonoBehaviour
     [SerializeField] GameObject Enemy;
     [SerializeField] Transform SpawnPoint;
     bool Check = true;
-    int Score;
+    [SerializeField] ScoreTracker sc;
+    [SerializeField] timer t;
     void Start()
     {
         pl.Target = Instantiate(Enemy) as GameObject;
@@ -19,9 +21,19 @@ public class GameLogic : MonoBehaviour
     {
         if(pl.Target.GetComponent<Enemy>().alive == false && Check == true) 
         {
+            sc.CurrentScore += 1;
             Check = false;
             Destroy(pl.Target.GetComponentInChildren<SpriteRenderer>());
             StartCoroutine(Spawn());
+        }
+        if(t.TimeRemaining <= 0)
+        {
+            if (sc.CurrentScore >= sc.HighScore)
+            {
+                sc.HighScore = sc.CurrentScore;
+            }
+            sc.CurrentScore = 0;
+            SceneManager.LoadScene("GameOver");
         }
     }
 
