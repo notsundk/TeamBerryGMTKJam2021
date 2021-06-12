@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameLogic : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class GameLogic : MonoBehaviour
     [SerializeField] GameObject Enemy;
     [SerializeField] Transform SpawnPoint;
     bool Check = true;
+
     [SerializeField] ScoreTracker sc;
     [SerializeField] timer t;
+
+    public TextMeshProUGUI ScoreUI;
+
     void Start()
     {
         pl.Target = Instantiate(Enemy) as GameObject;
@@ -19,7 +24,9 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-        if(pl.Target.GetComponent<Enemy>().alive == false && Check == true) 
+        ScoreUI.text = sc.CurrentScore.ToString();
+
+        if (pl.Target.GetComponent<Enemy>().alive == false && Check == true) //spawning new enemies
         {
             sc.CurrentScore += 1;
             Check = false;
