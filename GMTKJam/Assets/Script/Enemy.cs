@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Color EnemyColor;
+    public GameObject EnemySprite;
+    public bool alive = true;
 
-    // Update is called once per frame
-    void Update()
+    public Color[] selection = new Color[6];
+
+    private void Awake()
     {
-        
+        int rand = Random.Range(0, selection.Length);
+        EnemyColor = selection[rand];
+        EnemySprite.GetComponent<SpriteRenderer>().color = EnemyColor;
     }
 }

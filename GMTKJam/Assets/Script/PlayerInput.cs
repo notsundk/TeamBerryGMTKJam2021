@@ -16,11 +16,11 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LeftCycleNext = Input.GetKeyDown(KeyCode.E);
+        LeftCycleNext = Input.GetKeyDown(KeyCode.W);
         LeftCycleBack = Input.GetKeyDown(KeyCode.Q);
 
-        RightCycleNext = Input.GetKeyDown(KeyCode.O);
-        RightCycleBack = Input.GetKeyDown(KeyCode.P);
+        RightCycleNext = Input.GetKeyDown(KeyCode.P);
+        RightCycleBack = Input.GetKeyDown(KeyCode.O);
 
         Fire = Input.GetKeyDown(KeyCode.Space);
     }
