@@ -20,29 +20,33 @@ public class GameLogic : MonoBehaviour
     {
         pl.Target = Instantiate(Enemy) as GameObject;
         pl.Target.transform.position = SpawnPoint.position;
+        sc.CurrentScore = 0;
     }
 
     void Update()
     {
         ScoreUI.text = sc.CurrentScore.ToString();
-
-        if (pl.Target.GetComponent<Enemy>().alive == false && Check == true) //spawning new enemies
+        if(pl.Target != null)
         {
-            sc.CurrentScore += 1;
-            Check = false;
-            Destroy(pl.Target.GetComponentInChildren<SpriteRenderer>());
-            StartCoroutine(Spawn());
+            if (pl.Target.GetComponent<Enemy>().alive == false && Check == true) //spawning new enemies
+            {
+                sc.CurrentScore += 1;
+                Check = false;
+                Destroy(pl.Target.GetComponentInChildren<SpriteRenderer>());
+                StartCoroutine(Spawn());
+            }
         }
+        
         if(t.TimeRemaining <= 0)
         {
             if (sc.CurrentScore >= sc.HighScore)
             {
                 sc.HighScore = sc.CurrentScore;
             }
-            Destroy(pl.Target);
+            if(pl.Target != null)
+                Destroy(pl.Target);
             Debug.Log("SNAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!");
             Time.timeScale = 0;
-            sc.CurrentScore = 0;
             SceneManager.LoadScene("GameOver");
         }
     }
