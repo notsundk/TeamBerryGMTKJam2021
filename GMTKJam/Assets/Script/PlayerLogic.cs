@@ -24,7 +24,7 @@ public class PlayerLogic : MonoBehaviour
 
     void Awake()
     {
-        LeftSelection[0].r = 1; LeftSelection[1].r = 0; LeftSelection[2].r = 0; // 0 is red 1 is green  2 is blue
+        LeftSelection[0].r = 1; LeftSelection[1].r = 0; LeftSelection[2].r = 0; // 0 is red || 1 is green || 2 is blue
         LeftSelection[0].g = 0; LeftSelection[1].g = 1; LeftSelection[2].g = 0;
         LeftSelection[0].b = 0; LeftSelection[1].b = 0; LeftSelection[2].b = 1;
         LeftSelection[0].a = 1; LeftSelection[1].a = 1; LeftSelection[2].a = 1;

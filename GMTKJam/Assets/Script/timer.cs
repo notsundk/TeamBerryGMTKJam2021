@@ -28,7 +28,7 @@ public class timer : MonoBehaviour
         }
         else
         {
-            Debug.Log("GameOVERRRRRRR!!!");
+            Debug.Log("SNAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!");
             Time.timeScale = 0;
         }
 
