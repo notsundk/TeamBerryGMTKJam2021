@@ -32,6 +32,9 @@ public class GameLogic : MonoBehaviour
             {
                 sc.HighScore = sc.CurrentScore;
             }
+            Destroy(pl.Target);
+            Debug.Log("SNAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!");
+            Time.timeScale = 0;
             sc.CurrentScore = 0;
             SceneManager.LoadScene("GameOver");
         }

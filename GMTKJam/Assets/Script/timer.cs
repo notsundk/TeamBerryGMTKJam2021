@@ -26,11 +26,6 @@ public class timer : MonoBehaviour
         {
             TimeRemaining -= Time.deltaTime;
         }
-        else
-        {
-            Debug.Log("SNAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!");
-            Time.timeScale = 0;
-        }
 
         if (scaler < 0.2f)
         {
