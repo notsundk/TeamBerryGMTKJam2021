@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 575317285}
   - component: {fileID: 575317287}
   - component: {fileID: 575317286}
+  - component: {fileID: 575317288}
   m_Layer: 5
   m_Name: DidYouKnow
   m_TagString: Untagged
@@ -657,8 +658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.877}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -849, y: -263}
-  m_SizeDelta: {x: -1821.94, y: -1138.68}
+  m_AnchoredPosition: {x: -839, y: -268}
+  m_SizeDelta: {x: -1821.94, y: -1095.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575317286
 MonoBehaviour:
@@ -685,7 +686,9 @@ MonoBehaviour:
     We are
     only giving you 6.
 
-    Try again for a high score!'
+    Try again for a high score!
+
+    My BEST WAS 128'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 415862037ac4c5e4fb31cbc0a20c8632, type: 2}
   m_sharedMaterial: {fileID: -5059612025981714195, guid: 415862037ac4c5e4fb31cbc0a20c8632, type: 2}
@@ -762,6 +765,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575317284}
   m_CullTransparentMesh: 1
+--- !u!95 &575317288
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575317284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 22ab3791d7c2a7d4f843fc2b2705a2ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &640338587
 GameObject:
   m_ObjectHideFlags: 0
