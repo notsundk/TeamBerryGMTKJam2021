@@ -108,7 +108,7 @@ public class PlayerLogic : MonoBehaviour
 
         DefaultHand.SetActive(false);
         FiringHand.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         DefaultHand.SetActive(true);
         FiringHand.SetActive(false);
 
