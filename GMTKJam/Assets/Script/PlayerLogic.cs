@@ -99,11 +99,12 @@ public class PlayerLogic : MonoBehaviour
     IEnumerator FirePreparation()
     {
         bool dead = false;
-        if (Target.GetComponentInChildren<SpriteRenderer>().color == SpellColor)
+        if (Target.GetComponentInChildren<SpriteRenderer>().color == SpellColor) //Ignore this shit
         {
             Target.GetComponentInChildren<SpriteRenderer>().sprite = DeadEnemy;
             dead = true;
         }
+
 
         DefaultHand.SetActive(false);
         FiringHand.SetActive(true);
