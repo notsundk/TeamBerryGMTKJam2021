@@ -9,6 +9,8 @@ public class PlayerLogic : MonoBehaviour
     private int Left = 0;
     private int Right = 0;
 
+    public Sprite[] runes = new Sprite[3];
+
     [SerializeField] private Image LeftHand;
     [SerializeField] private Image RightHand;
     [SerializeField] private Image Spell;
@@ -53,9 +55,9 @@ public class PlayerLogic : MonoBehaviour
         if (SpellColor.g > 1) SpellColor.g = 1;
         if (SpellColor.b > 1) SpellColor.b = 1;
 
+        LeftHand.sprite = runes[Left];
+        RightHand.sprite = runes[Right];
 
-        LeftHand.color = LeftHandColor;
-        RightHand.color = RightHandColor;
         Spell.color = SpellColor;      
     }
 
