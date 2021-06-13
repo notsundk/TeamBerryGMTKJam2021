@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 3968792771590164587
-    second: GameOverAssets_0
+    second: GameOver
   - first:
       213: -4453247921838418320
-    second: GameOverAssets_2
+    second: Skull
   - first:
       213: 2649297275980309731
-    second: GameOverAssets_3
+    second: Candle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameOverAssets_0
+      name: GameOver
       rect:
         serializedVersion: 2
         x: 58
@@ -133,7 +133,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameOverAssets_2
+      name: Skull
       rect:
         serializedVersion: 2
         x: 71
@@ -154,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameOverAssets_3
+      name: Candle
       rect:
         serializedVersion: 2
         x: 528
