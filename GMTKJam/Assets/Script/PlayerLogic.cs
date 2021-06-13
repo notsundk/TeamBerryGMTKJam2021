@@ -101,6 +101,7 @@ public class PlayerLogic : MonoBehaviour
         bool dead = false;
         if (Target.GetComponentInChildren<SpriteRenderer>().color == SpellColor) //Ignore this shit
         {
+            FindObjectOfType<AudioManager>().Play("EnemyDie");
             Target.GetComponentInChildren<SpriteRenderer>().sprite = DeadEnemy;
             dead = true;
         }

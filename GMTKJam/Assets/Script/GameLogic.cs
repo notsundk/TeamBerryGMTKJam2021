@@ -41,9 +41,11 @@ public class GameLogic : MonoBehaviour
         {
             if (pl.Target.GetComponent<Enemy>().alive == false && Check == true) //spawning new enemies
             {
+                
                 sc.CurrentScore += multiplier ;
                 if(bonus)
                 {
+                    FindObjectOfType<AudioManager>().Play("BonusJingle");
                     multiplier += 1;
                 }
                 BonusDuration = 2;
@@ -63,6 +65,7 @@ public class GameLogic : MonoBehaviour
 
             if(BonusDuration <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("BonusDecay");
                 bonus = false;
                 multiplier = 1;
             }

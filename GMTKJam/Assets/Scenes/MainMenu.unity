@@ -5239,25 +5239,25 @@ MonoBehaviour:
   - name: ButtonPressed
     clip: {fileID: 0}
     volume: 0
-    pitch: 0
+    pitch: 1.41
     loop: 0
     source: {fileID: 0}
   - name: EnemyDie
     clip: {fileID: 8300000, guid: 5f4159cc41f7ebc42bee30d19ef69550, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1.6
     loop: 0
     source: {fileID: 0}
   - name: BonusJingle
     clip: {fileID: 8300000, guid: 8da2e10419997a64e872e139a73d1361, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1.4
     loop: 0
     source: {fileID: 0}
   - name: BonusDecay
     clip: {fileID: 8300000, guid: c39c3dd102eb99344839cfec7fc18e76, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1.46
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1717896199
