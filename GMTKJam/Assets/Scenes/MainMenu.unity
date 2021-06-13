@@ -1710,14 +1710,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Music - Benie Brown & Panop Norasing
+  m_text: 'Music (In-Game & SFX) - Benie Brown (Find him on Spotify)
 
 
-    Support - Robert "Emil" Blum
+    Music
+    (Menus) - Panop Norasing
 
 
-    and
-    Friends'
+    and Friends'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 415862037ac4c5e4fb31cbc0a20c8632, type: 2}
   m_sharedMaterial: {fileID: -5059612025981714195, guid: 415862037ac4c5e4fb31cbc0a20c8632, type: 2}
@@ -5236,9 +5236,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
+  - name: ButtonPressed
     clip: {fileID: 0}
     volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDie
+    clip: {fileID: 8300000, guid: 5f4159cc41f7ebc42bee30d19ef69550, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BonusJingle
+    clip: {fileID: 8300000, guid: 8da2e10419997a64e872e139a73d1361, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BonusDecay
+    clip: {fileID: 8300000, guid: c39c3dd102eb99344839cfec7fc18e76, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
@@ -5533,7 +5551,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: b8d828ec5092627418370d3ecd34c7df, type: 2}
   m_audioClip: {fileID: 8300000, guid: 01e17549db36de342872f05600dd45f9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5667,8 +5685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000053406, y: 21.00002}
-  m_SizeDelta: {x: 461.76, y: 158.5246}
+  m_AnchoredPosition: {x: 0.000053406, y: 19.12}
+  m_SizeDelta: {x: 461.76, y: 162.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821835047
 MonoBehaviour:
