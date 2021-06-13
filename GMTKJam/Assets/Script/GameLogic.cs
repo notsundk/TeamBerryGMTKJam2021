@@ -46,7 +46,6 @@ public class GameLogic : MonoBehaviour
             if(pl.Target != null)
                 Destroy(pl.Target);
             Debug.Log("SNAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!");
-            Time.timeScale = 0;
             SceneManager.LoadScene("GameOver");
         }
     }
@@ -54,7 +53,7 @@ public class GameLogic : MonoBehaviour
     IEnumerator Spawn()
     {
         GameObject temp = pl.Target;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.2f);
         pl.Target = Instantiate(Enemy) as GameObject;
         pl.Target.transform.position = SpawnPoint.position;
         Destroy(temp);

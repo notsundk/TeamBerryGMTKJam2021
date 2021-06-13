@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     PlayerInput pi;
     PlayerLogic pl;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,11 @@ public class PlayerScript : MonoBehaviour
         if (pi.RightCycleNext) { pl.RightHandCycleNext(); }
         if (pi.RightCycleBack) { pl.RightHandCycleBack(); }
 
-        if (pi.Fire) { pl.Fire(); }
+        if (pi.Fire) 
+        {
+            pl.Fire();
+        }
     }
+
+   
 }

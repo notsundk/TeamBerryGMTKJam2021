@@ -15,12 +15,15 @@ public class PlayerLogic : MonoBehaviour
 
     private Color RightHandColor;
     private Color LeftHandColor;
-    private Color SpellColor;
+    public Color SpellColor;
 
     public Color[] LeftSelection = new Color[3];
     public Color[] RightSelection = new Color[3];
 
-    public GameObject Target;
+    [System.NonSerialized]public GameObject Target;
+    [SerializeField] GameObject DefaultHand;
+    [SerializeField] GameObject FiringHand;
+    [SerializeField] Sprite DeadEnemy;
 
     void Awake()
     {
@@ -53,7 +56,7 @@ public class PlayerLogic : MonoBehaviour
 
         LeftHand.color = LeftHandColor;
         RightHand.color = RightHandColor;
-        Spell.color = SpellColor;
+        Spell.color = SpellColor;      
     }
 
     public void LeftHandCycleNext() 
@@ -86,10 +89,28 @@ public class PlayerLogic : MonoBehaviour
     }
     public void Fire()
     {
-        if(Target.GetComponentInChildren<SpriteRenderer>().color == SpellColor)
+        if(Target != null)
+            StartCoroutine(FirePreparation());
+    }
+
+    
+    IEnumerator FirePreparation()
+    {
+        bool dead = false;
+        if (Target.GetComponentInChildren<SpriteRenderer>().color == SpellColor)
         {
-            Target.GetComponent<Enemy>().alive = false;
+            Target.GetComponentInChildren<SpriteRenderer>().sprite = DeadEnemy;
+            dead = true;
         }
+
+        DefaultHand.SetActive(false);
+        FiringHand.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        DefaultHand.SetActive(true);
+        FiringHand.SetActive(false);
+
+        if (dead)
+            Target.GetComponent<Enemy>().alive = false;
     }
 
 
